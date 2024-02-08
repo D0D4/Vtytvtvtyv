@@ -1,0 +1,117 @@
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>App Store</title>
+              <link rel="manifest" href="manifest.json" />
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-7p0Xj8+Pe06D/Wti6FmPZ5dajq4iN+0Jqg5nB9xRfZdXJKUpXerLghhwRV5JyfJzjn9fK1vKu1qX9X4hREdm3A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+              <style>
+                  body {
+                      font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+                      margin: 0;
+                      padding: 0;
+                      background-color: #f8f8f8;
+                      color: #000;
+                      min-height: 100vh;
+                      display: flex;
+                      flex-direction: column;
+                  }
+
+                  header {
+                      background-color: #f8f8f8;
+                      border-bottom: 1px solid #ddd;
+                      padding: 10px 0;
+                      text-align: center;
+                  }
+
+                  main {
+                      display: flex;
+                      flex-wrap: wrap;
+                      justify-content: center;
+                      padding: 20px;
+                  }
+
+                  .app-details {
+                      text-align: left;
+                  }
+
+                  .app-details img {
+                      width: 80px;
+                      height: 80px;
+                      object-fit: cover;
+                      border-radius: 8px;
+                      margin-bottom: 10px;
+                      background-color: transparent;
+                      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                      float: left;
+                      margin-right: 10px;
+                  }
+
+                  .app-details h2 {
+                      margin: 0;
+                      font-size: 16px;
+                      rgba(0, 0, 0, 0.1);
+                  }
+
+                  .get-button {
+                      width: auto;
+                      background-color: #007aff;
+                      color: #fff;
+                      border: none;
+                      padding: 10px;
+                      border-radius: 6px;
+                      cursor: pointer;
+                      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                      float: right;
+                  }
+
+                  footer {
+                      background-color: #f8f8f8;
+                      border-top: 1px solid #ddd;
+                      color: #666;
+                      text-align: center;
+                      padding: 20px;
+                  }
+              </style>
+          </head>
+          <body>
+              <header>
+                  <h1>primeflix</h1>
+              </header>
+
+              <main>
+                  <section class="app-details">
+                      <img src="app4.png" alt="Crossyroad Icon">
+                      <h2>primeflix</h2>
+                      <p>When you press get you have to press add to homescreen!</p>
+                    <!-- Your HTML button -->
+                    <button class="get-button" onclick="showWarning()">Get App</button>
+
+                    <!-- JavaScript code -->
+                    <script>
+                      // Function to show the warning message and redirect
+                      function showWarning() {
+                        // Check if the browser is Safari on iOS
+                        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+                        // Show a warning message for Safari
+                        if (isSafari) {
+                          // Display the warning message
+                          alert('To install this app, tap the Share icon and then scroll down and select "Add to Home Screen." (you have to be on safari)');
+
+                          // Redirect to a different website after the user dismisses the alert
+                          window.location.href = 'https://primeflix-web.vercel.app'; // Replace with your desired URL
+                        }
+                      }
+                    </script>
+
+
+                  </section>
+              </main>
+
+              <footer>
+                  <p>&copy; 2024 PugWare App Store. All rights reserved.</p>
+              </footer>
+          </body>
+          </html>

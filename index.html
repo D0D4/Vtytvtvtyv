@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Store</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-7p0Xj8+Pe06D/Wti6FmPZ5dajq4iN+0Jqg5nB9xRfZdXJKUpXerLghhwRV5JyfJzjn9fK1vKu1qX9X4hREdm3A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .app {
+      text-align: center;
+      margin: 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #fff;
+      flex: 0 0 auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .app-container {
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .app img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      background-color: transparent;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .app h2 {
+      margin: 0;
+      font-size: 16px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .get-button {
+      width: 100%;
+      background-color: #007aff;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #f8f8f8;
+      border-top: 1px solid #ddd;
+      color: #666;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script>
+    // Function to check if the user has a valid key
+    async function checkKeyValidity() {
+      const validKey = "BoldCheetahLevitating"; // Replace with your secret key
+      let userKey = localStorage.getItem("accessKey");
+
+      if (!userKey) {
+        // If userKey is not found in localStorage, ask for it
+        userKey = prompt("Enter your access key:");
+        localStorage.setItem("accessKey", userKey);
+      }
+
+      if (userKey === validKey) {
+        // Key is valid, show the content
+        document.body.style.display = 'block';
+      } else {
+        // Key is invalid, show an error message
+        alert("Invalid access key. Before you click close, make sure if you're at school to connect to a different WiFi to get the key!");
+        // Optionally, redirect the user or take other actions on invalid key
+        window.location.href = "https://direct-link.net/1039742/pugware-appstore"; // Replace with your redirect link
+      }
+    }
+
+    // Call the function to check key validity when the page loads
+    checkKeyValidity();
+  </script>
+
+
+  <!-- Content of your page -->
+  <header>
+    <i class="fab fa-apple"></i>
+    <h1>App Store</h1>
+  </header>
+
+  <main>
+    <div class="app">
+      <div class="app-container">
+        <img src="app1.png" alt="lonelil">
+        <h2>lonelil</h2>
+        <button class="get-button" onclick="redirectToSubwaySurfers()">Get</button>
+      </div>
+    </div>
+
+    <div class="app">
+      <div class="app-container">
+        <img src="app2.png" alt="PugWare">
+        <h2>Movie-web(best)</h2>
+        <button class="get-button" onclick="redirectToApp2()">Get</button>
+      </div>
+    </div>
+
+    <div class="app">
+      <div class="app-container">
+        <img src="app3.png" alt="fnaf1">
+        <h2>susflix</h2>
+        <button class="get-button" onclick="redirectToApp3()">Get</button>
+      </div>
+    </div>
+
+    <div class="app">
+      <div class="app-container">
+        <img src="app4.png" alt="crossy road">
+        <h2>primeflix</h2>
+        <button class="get-button" onclick="redirectToApp4()">Get</button>
+      </div>
+    </div>
+
+    <div class="app">
+      <div class="app-container">
+        <img src="app5.png" alt="messages">
+        <h2>netfilm</h2>
+        <button class="get-button" onclick="redirectToApp5()">Get</button>
+      </div>
+    </div>
+
+    <div class="app">
+      <div class="app-container">
+        <img src="vote.png" alt="vote">
+        <h2>recommend games</h2>
+        <button class="get-button" onclick="recommend()">recommend</button>
+      </div>
+    </div>
+
+    <!-- Add more apps as needed -->
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 PugWare App Store. All rights reserved.</p>
+  </footer>
+</body>
+  <script>
+    // JavaScript function to redirect to Subway Surfers page
+    function redirectToSubwaySurfers() {
+      window.location.href = "Subway-Surfers.html";
+    }
+
+    // JavaScript function to redirect to App 2 page
+    function redirectToApp2() {
+      window.location.href = "app2.html";
+    }
+
+    function redirectToApp3() {
+      window.location.href = "app3.html";
+    }
+
+    function redirectToApp4() {
+      window.location.href = "app4.html";
+    }
+
+    function redirectToApp5() {
+      window.location.href = "app5.html";
+    }
+
+    function recommend() {
+      window.location.href = "https://forms.gle/pSrq92TY9E3dYxLQ8";
+    }
+  </script>
+
+</html>
